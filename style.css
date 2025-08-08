@@ -326,5 +326,59 @@ footer {
   text-decoration: underline;
 }
 
+/* ---------- RESPONSIVE LAYOUT ---------- */
+
+/* Tablet and smaller */
+@media (max-width: 768px) {
+  /* Profile section stacks vertically */
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .left-section,
+  .profile-text,
+  .profile-right {
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .profile-text {
+    margin-top: 20px;
+  }
+
+  .books-grid {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  nav a {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .book-item img {
+    width: 120px;
+  }
+
+  .profile-pic {
+    max-width: 200px;
+  }
+}
+
 
 
