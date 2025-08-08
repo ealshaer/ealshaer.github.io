@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Publications - Dr. Ehab Alshaer</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .nav-buttons {
+      display: flex;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+
+    .nav-buttons button {
+      padding: 8px 16px;
+      background-color: #003366;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .nav-buttons button:hover {
+      background-color: #0059b3;
+    }
+  </style>
+<script>
+  function searchGoogleScholarByKeyword(keywords) {
+    const author = 'author:"Ehab Al-Shaer"';
+
+    // If it's a string, wrap it in an array
+    const keywordsArray = Array.isArray(keywords) ? keywords : [keywords];
+
+    // Join keywords with OR
+    const keywordsQuery = keywordsArray.join(' OR ');
+
+    // Build query string with backticks for template literals
+    const fullQuery = `${author} Abstract:(${keywordsQuery})`;
+
+    // Encode and build search URL
+    const encodedQuery = encodeURIComponent(fullQuery);
+    const searchUrl = `https://scholar.google.com/scholar?q=${encodedQuery}`;
+
+    // Open in new tab
+    window.open(searchUrl, "_blank");
+  }
+</script>
+
+
+
+</head>
+<body>
+
+  <!-- Site Title -->
+  <div class="site-title">Dr. Ehab Alshaer's Publications</div>
+  <div class="separator-line"></div>
+
+  <!-- Navigation Bar -->
+  <nav class="custom-navbar">
+    <a href="index.html">Back to Main Page</a>
+    <a href="#all-publications">All Publications</a>
+    <a href="#by-theme">Find By Theme</a>
+    <a href="#by-topic">Find By Topic</a>
+  </nav>
+
+
+<!-- Section 1: Direct Links -->
+<section id="all-publications">
+  <h2>Find All Publications</h2>
+  <p>Click on any icon to view all publications:</p>
+  
+  <div class="publication-icons">
+    <a href="https://scholar.google.com/citations?user=3ewd8VwAAAAJ" target="_blank">
+      <img src="googleScholar.png" alt="Google Scholar">
+    </a>
+    <a href="https://dl.acm.org/profile/81339487878" target="_blank">
+      <img src="acmDL.png" alt="ACM">
+    </a>
+    <a href="https://ieeexplore.ieee.org/author/38529167200" target="_blank">
+      <img src="ieee.png" alt="IEEE">
+    </a>
+  </div>
+</section>
+
+
+  <hr>
+
+  <!-- Section 2: By Themes -->
+  <section id="by-theme">
+    <h2>Find Publications by Theme</h2>
+
+    <button onclick="searchGoogleScholarByKeyword(['firewalls', 'security configuration', 'smart grids', 'IOT', 'industry control systems', 'SAT', 'SMT', 'BDDs'])">
+      Formal Methods for Cybersecurity Verification
+    </button>
+
+    <button onclick="searchGoogleScholarByKeyword(['firewalls', 'cyber defense agents', 'intrusion detection', 'security control', 'cybersecurity-specific language models', 'moving target defense', 'cyber deception', 'NLP', 'deep learning', 'reinforcement learning'])">
+      AI-empowered Cybersecurity
+    </button>
+
+    <button onclick="searchGoogleScholarByKeyword(['Overlay networks', 'Multicasting', 'monitoring', 'fault management', 'network verification', 'multimedia networking', 'multimedia protocols'])">
+      Networking
+    </button>
+
+    <button onclick="searchGoogleScholarByKeyword(['monitoring', 'network management', 'fault management', 'security management', 'Overlay networks'])">
+      Distributed Monitoring & Network Management
+    </button>
+  </section>
+
+  <hr>
+
+<section id="by-topic">
+  <h2>Find Publications by Specific Topics</h2>
+
+  <div class="topics-container">
+
+    <!-- Cybersecurity -->
+    <div class="topic-category">
+      <h3>Cybersecurity</h3>
+      <div class="topics-list">
+        <button onclick="searchGoogleScholarByKeyword('firewalls')">Firewalls</button>
+        <button onclick="searchGoogleScholarByKeyword('Access Control')">Access Control</button>
+        <button onclick="searchGoogleScholarByKeyword(['Configuration Verification','Synthesis'])">Configuration Verification & Synthesis</button>
+        <button onclick="searchGoogleScholarByKeyword('Intrusion Detection')">Intrusion Detection</button>
+        <button onclick="searchGoogleScholarByKeyword('Intrusion Response')">Adaptive Intrusion Response</button>
+        <button onclick="searchGoogleScholarByKeyword('Cyber Risk')">Cyber Risk Analytics</button>
+        <button onclick="searchGoogleScholarByKeyword('Threat Intelligence')">Data Driven Threat Intelligence</button>
+        <button onclick="searchGoogleScholarByKeyword('Security Controls')">Security Controls</button>
+        <button onclick="searchGoogleScholarByKeyword(['Cyber Physical Security', 'Resiliency', 'Smart Grids', 'IOT'])">Cyber-Physical Security & Resiliency</button>
+        <button onclick="searchGoogleScholarByKeyword('Cyber Deterrence')">Cyber Deterrence</button>
+        <button onclick="searchGoogleScholarByKeyword('Cyber Deception')">Active Cyber Deception</button>
+        <button onclick="searchGoogleScholarByKeyword('Text Analytics Language Models')">Cybersecurity Text Analytics and Language Models</button>
+        <button onclick="searchGoogleScholarByKeyword('Adaptive Cyber Defense')">AI-empowered Adaptive Cyber Defense</button>
+      </div>
+    </div>
+
+    <!-- Domains -->
+    <div class="topic-category">
+      <h3>Domains</h3>
+      <div class="topics-list">
+        <button onclick="searchGoogleScholarByKeyword('Enterprise cybersecurity')">Enterprise</button>
+        <button onclick="searchGoogleScholarByKeyword('Cloud security')">Clouds</button>
+        <button onclick="searchGoogleScholarByKeyword('Smart Grids')">Smart Grids</button>
+        <button onclick="searchGoogleScholarByKeyword('IOT')">IoT</button>
+        <button onclick="searchGoogleScholarByKeyword('Industry Control Systems')">Industry Control Systems</button>
+      </div>
+    </div>
+
+    <!-- Theoretical Foundations -->
+    <div class="topic-category">
+      <h3>Theoretical Foundations</h3>
+      <div class="topics-list">
+        <button onclick="searchGoogleScholarByKeyword('SAT')">SAT</button>
+        <button onclick="searchGoogleScholarByKeyword('SMT')">SMT</button>
+        <button onclick="searchGoogleScholarByKeyword('BDD')">BDD</button>
+        <button onclick="searchGoogleScholarByKeyword('NLP')">NLP</button>
+        <button onclick="searchGoogleScholarByKeyword('Language Models')">Language Models</button>
+        <button onclick="searchGoogleScholarByKeyword('Deep Learning')">Deep Learning</button>
+        <button onclick="searchGoogleScholarByKeyword('Reinforcement Learning')">Reinforcement Learning</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  <footer>
+    <p>&copy; 2025 Dr. Ehab Alshaer. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
