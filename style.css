@@ -72,10 +72,9 @@ nav a:hover {
 /* Profile picture */
 .profile-pic {
   width: 100%;
-  max-width: 300px;
+  max-width: 450px; /* increased from 300px */
   height: auto;
   border-radius: 20%;
-  border: 8px;
 }
 
 .left-section {
@@ -223,7 +222,7 @@ footer {
 }
 
 .book-item img {
-  width: 160px;
+  width: 130px;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -361,22 +360,28 @@ footer {
 }
 
 /* Small phones */
-@media (max-width: 480px) {
-  body {
-    font-size: 14px;
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: row;       /* Keep side by side */
+    flex-wrap: wrap;          /* Allow wrapping if needed */
+    align-items: center;
+    justify-content: center;
+    text-align: left;
   }
 
-  nav a {
-    font-size: 12px;
-    padding: 8px 12px;
+  .profile-left {
+    flex: 0 0 auto;
+    max-width: 200px;        /* Slightly smaller on mobile */
+  }
+
+  .profile-text {
+    flex: 1 1 auto;
+    margin-left: 15px;
+    max-width: 300px;
   }
 
   .book-item img {
-    width: 120px;
-  }
-
-  .profile-pic {
-    max-width: 200px;
+    width: 100px;            /* Smaller books on mobile */
   }
 }
 
