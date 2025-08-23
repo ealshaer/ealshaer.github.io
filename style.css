@@ -330,14 +330,59 @@ footer {
 
 
 /* Ensure on smaller screens it still stays side by side */
-@media (max-width: 600px) {
-  .profile-container {
+/* ----------- MOBILE LAYOUT FOR INDEX ----------- */
+@media (max-width: 768px) {
+  /* Profile Section */
+  #profile .profile-container {
+    display: flex;
     flex-direction: row;
     align-items: flex-start;
+    gap: 15px;
   }
 
-  .profile-pic {
-    width: 120px;
+  #profile .profile-left .profile-pic {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  #profile .profile-text {
+    flex: 1;
+    font-size: 0.95em;
+  }
+
+  /* Books Section: Horizontal Scroll */
+  #books .books-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+  }
+
+  #books .book-item {
+    min-width: 160px;
+    flex: 0 0 auto;
+    text-align: center;
+    scroll-snap-align: start;
+  }
+
+  #books .book-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+  }
+
+  #books .book-item img:hover {
+    transform: scale(1.05);
+  }
+
+  #books .downloads-note {
+    text-align: center;
+    font-size: 0.8em;
+    margin-top: 8px;
   }
 }
 
