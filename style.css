@@ -59,13 +59,15 @@ nav a:hover {
 /* PROFILE SECTION CONTAINER */
 .profile-container {
   display: flex;
-  align-items: center; /* keeps top edges aligned */
-  justify-content: flex-start;
-  gap: 20px;
+  align-items: center;
+  justify-content: center; /* Center horizontally */
+  gap: 40px; /* Increased gap for balance */
   padding: 40px;
   background-color: #f5f5f5;
-  flex-wrap: nowrap; /* force in one line */
+  max-width: 1200px; /* Prevents it from stretching too wide on large screens */
+  margin: 0 auto; /* Centers the whole container */
 }
+
 
 
 /* LEFT SIDE OF PROFILE */
@@ -89,7 +91,7 @@ nav a:hover {
 
 /* Text beside profile */
 .profile-text {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.6;
   max-width: 400px;
   flex: 1;
