@@ -332,7 +332,7 @@ footer {
 /* Ensure on smaller screens it still stays side by side */
 /* ----------- MOBILE LAYOUT WITH SNAP & MOMENTUM ----------- */
 @media (max-width: 768px) {
-  /* Profile Section */
+  /* Profile Section Layout */
   #profile .profile-container {
     display: flex;
     flex-direction: row;
@@ -352,28 +352,29 @@ footer {
     font-size: 0.95em;
   }
 
-  /* Books Section: Horizontal scroll with snapping */
+  /* Books Section */
   #books {
-    margin-top: 10px;
+    margin-top: 20px;
   }
 
   #books .books-grid {
     display: flex;
     flex-direction: row;
-    gap: 12px;
+    gap: 16px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch; /* Smooth iOS momentum scroll */
-    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 10px 0;
   }
 
   #books .books-grid::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for Chrome/Safari */
+    display: none;
   }
 
   #books .book-item {
-    min-width: 80%;
-    flex: 0 0 auto;
+    flex: 0 0 65%; /* each book takes about 65% of the viewport width */
+    max-width: 250px;
     text-align: center;
     scroll-snap-align: center;
   }
@@ -395,6 +396,7 @@ footer {
     margin-top: 8px;
   }
 }
+
 
 
 
