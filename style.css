@@ -329,19 +329,20 @@ footer {
 
 
 @media (max-width: 768px) {
-  /* Ensure profile section itself is column layout */
+  /* Profile should be column layout */
   #profile {
     display: flex;
     flex-direction: column;
   }
 
-  /* Profile Container stays row for image + text */
+  /* Profile content is row (image left, text right) */
   #profile .profile-container {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     gap: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 0;
+    padding: 20px; /* reduce padding for mobile */
   }
 
   #profile .profile-left .profile-pic {
@@ -355,10 +356,12 @@ footer {
     font-size: 0.95em;
   }
 
-  /* Books Section now sits UNDER profile properly */
+  /* Books Section is now full width under profile */
   #books {
     margin-top: 10px;
     width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
   }
 
   #books .books-grid {
@@ -378,7 +381,7 @@ footer {
   }
 
   #books .book-item {
-    flex: 0 0 65%;
+    flex: 0 0 70%;
     max-width: 250px;
     text-align: center;
     scroll-snap-align: center;
@@ -389,18 +392,8 @@ footer {
     height: auto;
     border-radius: 6px;
   }
-
-  #books .downloads {
-    font-size: 0.85em;
-    margin-top: 4px;
-  }
-
-  #books .downloads-note {
-    text-align: center;
-    font-size: 0.8em;
-    margin-top: 8px;
-  }
 }
+
 
 
 
