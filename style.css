@@ -328,11 +328,14 @@ footer {
 /* ---------- RESPONSIVE LAYOUT ---------- */
 
 
-
-/* Ensure on smaller screens it still stays side by side */
-/* ----------- MOBILE LAYOUT WITH SNAP & MOMENTUM ----------- */
 @media (max-width: 768px) {
-  /* Profile Section Layout */
+  /* Ensure profile section itself is column layout */
+  #profile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Profile Container stays row for image + text */
   #profile .profile-container {
     display: flex;
     flex-direction: row;
@@ -352,12 +355,12 @@ footer {
     font-size: 0.95em;
   }
 
-    /* Books Section */
+  /* Books Section now sits UNDER profile properly */
   #books {
-    margin-top: 20px;
-    padding: 0;
+    margin-top: 10px;
+    width: 100%;
   }
-  
+
   #books .books-grid {
     display: flex;
     flex-direction: row;
@@ -366,22 +369,39 @@ footer {
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-  
     padding: 10px 0;
-    margin: 0; /* Remove any default margin */
-    width: 100%; /* Ensure it takes full width of screen */
-    box-sizing: border-box;
+    margin: 0;
   }
-  
+
+  #books .books-grid::-webkit-scrollbar {
+    display: none;
+  }
+
   #books .book-item {
     flex: 0 0 65%;
     max-width: 250px;
     text-align: center;
     scroll-snap-align: center;
-    margin: 0 auto; /* Center each item horizontally */
   }
 
+  #books .book-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+
+  #books .downloads {
+    font-size: 0.85em;
+    margin-top: 4px;
+  }
+
+  #books .downloads-note {
+    text-align: center;
+    font-size: 0.8em;
+    margin-top: 8px;
+  }
 }
+
 
 
 
