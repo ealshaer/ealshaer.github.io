@@ -352,11 +352,12 @@ footer {
     font-size: 0.95em;
   }
 
-  /* Books Section */
+    /* Books Section */
   #books {
     margin-top: 20px;
+    padding: 0;
   }
-
+  
   #books .books-grid {
     display: flex;
     flex-direction: row;
@@ -365,36 +366,21 @@ footer {
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
+  
     padding: 10px 0;
+    margin: 0; /* Remove any default margin */
+    width: 100%; /* Ensure it takes full width of screen */
+    box-sizing: border-box;
   }
-
-  #books .books-grid::-webkit-scrollbar {
-    display: none;
-  }
-
+  
   #books .book-item {
-    flex: 0 0 65%; /* each book takes about 65% of the viewport width */
+    flex: 0 0 65%;
     max-width: 250px;
     text-align: center;
     scroll-snap-align: center;
+    margin: 0 auto; /* Center each item horizontally */
   }
 
-  #books .book-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
-  }
-
-  #books .downloads {
-    font-size: 0.85em;
-    margin-top: 4px;
-  }
-
-  #books .downloads-note {
-    text-align: center;
-    font-size: 0.8em;
-    margin-top: 8px;
-  }
 }
 
 
