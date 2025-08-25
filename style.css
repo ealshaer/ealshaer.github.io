@@ -57,6 +57,12 @@ nav a:hover {
 }
 
 /* PROFILE SECTION CONTAINER */
+#profile {
+  background-color: #f5f5f5; /* The back rectangle color */
+  width: 100%; /* Full width of screen */
+  padding: 40px 0; /* Space above & below */
+}
+
 .profile-container {
   display: flex;
   align-items: center;
@@ -64,7 +70,7 @@ nav a:hover {
   gap: 40px; /* Increased gap for balance */
   padding: 0 20px;
   background-color: #f5f5f5;
-  max-width: 100%; /* Prevents it from stretching too wide on large screens */
+  max-width: 1200px; /* Prevents it from stretching too wide on large screens */
   margin: 0 auto; /* Centers the whole container */
 }
 
